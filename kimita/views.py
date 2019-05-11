@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Skill, Project
+from .models import User, Project
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.conf import settings
 import simplejson as json
@@ -9,7 +9,7 @@ import requests
 
 # Create your views here.
 def home(request):
-    title = ' Home'
+    title = "Kimita's Profile"
     projects = Project.get_all()
 
     return render(request,'all_projects/index.html',{
