@@ -95,7 +95,7 @@ body {
   
   .work-item-row {
       /*padding: 10% 0;*/
-      margin-bottom:100px;
+      margin-bottom:15px;
       
   }
   
@@ -138,4 +138,10 @@ body {
     height: 400px;
     overflow: scroll;
     overflow-x: hidden;
+  }
+  #mainNav {
+      background-color: rgba(48, 118, 119, 0.822)
+  }
+  .footer-copyright {
+    background-color: rgba(48, 118, 119, 0.822)
   }
