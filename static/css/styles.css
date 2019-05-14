@@ -6,10 +6,6 @@ body {
     padding: 0 5vw;
   }
   
-  .nav-default {
-      background: white;
-  
-  }
   
   h1, h2, h3, h4, h5{
       color:#4A4E69 !important;
@@ -64,66 +60,8 @@ body {
   .profile-pic {
     box-shadow: 0px 4px 6px 2px lightgrey;
     border-radius: 50%;
-    max-width: 70%;
+    max-width: 80%;
   }
-  
-  /*.m-t-1 {
-      margin-top:1em;
-  }
-  .p-t-1 {
-      padding-top:1em;
-  }*/
-  
-  
-  /*.about-me {
-      margin-top:25px;
-  }*/
-  
-  .navbar-default {
-      background-color: #C9ADA7;
-      background: none;
-      border: none;
-      border-radius:0;
-  }
-  
-  /*.row-footer {
-      background-color: lightgrey;
-      -webkit-clip-path: polygon(0 0%, 100% 4%, 100% 100%, 0% 100%);
-      clip-path: polygon(0 0%, 100% 4%, 100% 100%, 0% 100%);
-      padding: 65px 10px;
-  }*/
-  
-  .work-item-row {
-      /*padding: 10% 0;*/
-      margin-bottom:15px;
-      
-  }
-  
-  .row-tools {
-    padding: 50px 0;
-  }
-  
-  /*.linkedin-btn {
-      width:140px;
-      box-shadow: 0px 2px 5px 1px lightgrey;
-      padding: 12px;
-      border-radius: 5px;
-  }*/
-  
-  .btn-launch {
-      width:100%;
-      max-width:200px;
-      background-color: #549657;
-      color:white;
-      box-shadow: 0px 2px 5px 1px darkgrey;
-  }
-  
-  .btn-launch:hover,
-  .btn-launch:focus {
-      color: white;
-      background: #3d7140;
-  }
-  
   .about-side {
       position:fixed;
   }
@@ -134,14 +72,49 @@ body {
       box-shadow: 0 0 2px 2px lightgrey;
       padding: 30px;
   }
-  .scroll{
-    height: 400px;
+  /* .scroll{
+    height: 550px;
     overflow: scroll;
     overflow-x: hidden;
+    /* margin-top:50px; */
+  /* }
+  ::-webkit-scrollbar {
+    display: none; */
+  /* } */ */
+
+  .nav{
+      background-color: rgba(48, 118, 119, 0.822);
+      position:fixed;
+      width: 100%;
+      z-index:99;
+      margin: 0px;
+
   }
-  #mainNav {
-      background-color: rgba(48, 118, 119, 0.822)
+  .page-footer {
+    background-color: rgba(48, 118, 119, 0.822);
+    width: 100%;
+    z-index:99;
+    margin: 0px;
   }
-  .footer-copyright {
-    background-color: rgba(48, 118, 119, 0.822)
+  .languages{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1em;
+    
   }
+  #navbarNavAltMarkup{
+      text-decoration-color: aliceblue
+  }
+  .work-item-row {
+	margin-bottom:10px;
+}
+.langicons {
+    width: 70px;
+    height: 70px;
+    
+}
+.projectname{
+    font-family: 'Courgette', cursive;
+    font-size: 250%;
+    text-decoration: underline
+}

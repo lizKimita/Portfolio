@@ -1,31 +1,32 @@
 {% extends 'all_projects/base.html' %}
-{% block content %}
 
-<div class="container">
+{% block content %}
+{{block.super}}
+
+<div class="container-fluid">
     <div class="row">
-        <div class="col-sm-3 about-me about-side text-center hidden-xs">
-            <img src="/media/images/d89c433e9e4144be2714643b111c6892_yJ3KzlC.jpeg" width=200 class="profile-pic img-responsive center-block">
-            <h1>Elizabeth Wanjiku Kimita</h1>
+        <div class="col-sm-3 about-me about-side text-center hidden-xs" style="margin-top:150px">
+            <img src="/media/images/d89c433e9e4144be2714643b111c6892_yJ3KzlC.jpeg" width=300 class="profile-pic img-responsive center-block">
+            <h1 style="font-family: 'Courgette', cursive;">Elizabeth Wanjiku Kimita</h1>
             <h2>Full Stack Developer</h2>
             <h3>Interests: </h3>
 
-            <div class="text-center" style="margin:20px">
-                <a href="#" class="cta-icon"><i class="devicon-twitter-plain colored"></i></a>
-                <a href="#" class="cta-icon"><i class="devicon-github-plain colored"></i></a>
-            </div>
         </div>
+        <div class="col-sm-1 col-sm-offset-3"></div>
         
         <!-- loopin through the projects -->
-    
-        <div class="scroll">
+        <div class="scroll" style="margin-top:120px">
         {% for project in projects %}
-        <div class="col-sm-9 col-sm-offset-3">
+        <div class="col-sm-8 col-sm-offset-3">
             <div class="row work-item-row">
                 <div class="col-sm-8 col-sm-offset-2 project">
-                    <p>{{project.name}}</p>
+                    <p class="projectname"><strong>{{project.name}}</strong></p>
                     <p>{{project.description}}</p>
-                    <a href="{{project.url}}"></a>
-                    <p>{{project.languages}}</p>
+                    <p>Languages:{{project.languages}}</p>
+                    <p>Published on:{{project.date}}</p>
+                  <p><a href="{{project.url}}" target="_blank">view project</a></p> 
+                   <a href="{{project.github_url}}" target="_blank">view project on Github</a>  
+                    
                 </div>
             </div>
         </div>
@@ -35,19 +36,31 @@
             <h2 class="text-center">There is no Image yet!</h2>
     </div>
         {% endfor %}
+
     </div>
+
+</div>
 </div>
 <br>
-
-<div>
-    <h1>Technologies</h1>
-    <p>Angular</p>
-    <p>Python</p>
-    <p>Javascript</p>
-    <p>Html</p>
-
-
+<div class="row">
+    <div class="col-md-3 about-me about-side text-center hidden-xs" style="margin-top:100px"></div>
+    <div class="col-md-9 col-sm-offset-3">
+        <h1 style="text-align:center; padding-top: 8%;" class="projectname">Languages</h1>
+        <br>
+    <div class="container languages"> 
+        <a style="padding-right:5%;"><img src="https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg" alt="" class="langicons" > <p>Angular</p> </a>
+        <a style="padding-right:5%;"><img src="http://pluspng.com/img-png/logo-javascript-png-javascript-for-ile-y-ld-z-600.png" alt="" style="width:150px;height:100px;"> <br><p >Javascript</p></a>
+        <a style="padding-right:5%;"><img src="http://www.stickpng.com/assets/images/5848152fcef1014c0b5e4967.png" alt="" class="langicons"> <p>Python</p> </a>
+        <a style="padding-right:3%;"><i class="fas fa-pepper-hot fa-5x fa-flip-horizontal"></i><br><p class="">Flask</p></a>
+        <a style="padding-right:5%;"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png" alt="" class="langicons"><p>postgreSQL</p></a>
+        <a style="padding-right:5%;"><img src="https://cdn.iconscout.com/icon/free/png-256/django-12-1175186.png" alt="" class="langicons"> <p>Django</p> </a>
+    </div>
 </div>
+</div>
+
+    <br>
+    <br>
+
 </div>
 {% endblock %}
 
