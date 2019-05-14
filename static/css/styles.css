@@ -118,3 +118,6 @@ body {
     font-size: 250%;
     text-decoration: underline
 }
+.btn-lg {
+    border-color: rgba(48, 118, 119, 0.822);
+}
