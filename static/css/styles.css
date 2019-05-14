@@ -120,4 +120,14 @@ body {
 }
 .btn-lg {
     border-color: rgba(48, 118, 119, 0.822);
+    
+}
+.btn:hover {
+    background-color:  rgba(48, 118, 119, 0.822);
+    color:white;
+}
+.contact{
+    font-size: 120%;
+    color: aliceblue
+
 }
