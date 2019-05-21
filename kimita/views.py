@@ -11,10 +11,12 @@ from django.http import JsonResponse
 def home(request):
     title = "Kimita's Profile"
     projects = Project.get_all()
+    image = User.objects.all()
 
     return render(request,'all_projects/index.html',{
         'title': title,
         'projects':projects,
+        'image':image,
     })
 
 def all_repos(request):

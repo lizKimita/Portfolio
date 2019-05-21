@@ -6,7 +6,8 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3 about-me about-side text-center hidden-xs" style="margin-top:150px">
-            <img src="/media/images/d89c433e9e4144be2714643b111c6892_yJ3KzlC.jpeg" width=300 class="profile-pic img-responsive center-block">
+            {% for item in image%}
+            <img src="{{item.image.url}}" width=300 class="profile-pic img-responsive center-block">{% endfor %}
             <h1 style="font-family: 'Courgette', cursive;">Elizabeth Wanjiku Kimita</h1>
             <h2>Full Stack Developer</h2>
             <h4><strong>Interests:</strong>  Software Engineering, Data Science and Artificial Intelligence </h4>
