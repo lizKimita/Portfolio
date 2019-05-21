@@ -1,10 +1,8 @@
 from django.contrib import admin
-from .models import Project, languages, User
+from .models import Project, User
 
-class ProjectAdmin(admin.ModelAdmin):
-    filter_horizontal =('languages',)
 
 admin.site.register(User)
-admin.site.register(Project,ProjectAdmin)
-admin.site.register(languages)
+admin.site.register(Project)
+
 
